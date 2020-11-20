@@ -1,6 +1,6 @@
 # katacoda
 
-A small shell script to run on katacoda to download the latest kubectl and the latest minikube and start minikube with the newest kubectl
+A shell script to run on katacoda to download the latest kubectl, latest minikube and start minikube with the newest kubectl, and enable autocompletion with alias k=kubectl
 
 Go to https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster then copy paste the following block into the terminal using Ctrl+Shift+V and then press enter:
 
