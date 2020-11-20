@@ -10,3 +10,5 @@ cd katacoda
 chmod +x katacoda.sh
 . katacoda.sh
 ```
+
+You could try out this tutorial to get your feet wet with kubernetes: https://kubernetes.io/docs/tutorials/kubernetes-basics/
