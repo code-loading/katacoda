@@ -55,4 +55,4 @@ echo 'complete -F __start_kubectl k' >>~/.bashrc
 . ~/.bashrc
 
 #start minikube
-minikube start
+minikube start --kubernetes-version=$KUBE_VER
