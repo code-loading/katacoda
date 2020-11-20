@@ -32,8 +32,12 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 #tr -d \" is used to remove the quotation marks around the version in the KUBE_VER variable
 KUBE_VER=$(kubectl version -o json | jq '. | .serverVersion.gitVersion' | tr -d \")
 
+#set kubectl version in minikube config
+minikube config set kubernetes-version $KUBE_VER
+
+#this would make minikube always download whatever version of kubectl is specified, it's better to set it in the minikube config
 #start minikube with latest kubernetes version
-minikube start --kubernetes-version=$KUBE_VER
+#minikube start --kubernetes-version=$KUBE_VER
 
 #create alias
 alias k=kubectl
@@ -46,3 +50,6 @@ echo 'complete -F __start_kubectl k' >>~/.bashrc
 
 #reinitialise shell for completion to work with aliases
 . ~/.bashrc
+
+#start minikube
+minikube start
