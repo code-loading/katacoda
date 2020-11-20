@@ -29,7 +29,7 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 #export kubectl client gitVersion to var named KUBE_VER
-KUBE_VER=$(kubectl version -o json | jq '. | .clientVersion.gitVersion')
+KUBE_VER=$(kubectl version -o json | jq '. | .clientVersion.gitVersion' | tr -d \")
 
 #start minikube with latest kubernetes version
 minikube start --kubernetes-version=$KUBE_VER
