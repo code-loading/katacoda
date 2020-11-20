@@ -33,7 +33,7 @@ minikube start
 
 #export kubectl client gitVersion to var named KUBE_VER
 #tr -d \" is used to remove the quotation marks around the version in the KUBE_VER variable
-KUBE_VER=$(kubectl version -o json | jq '. | .serverVersion.gitVersion' | tr -d \")
+KUBE_VER=$(kubectl version -o json | jq '. | .clientVersion.gitVersion' | tr -d \")
 
 #set kubectl version in minikube config
 minikube config set kubernetes-version $KUBE_VER
