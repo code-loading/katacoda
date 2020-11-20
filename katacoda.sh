@@ -30,7 +30,7 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 #export kubectl client gitVersion to var named KUBE_VER
 #tr -d \" is used to remove the quotation marks around the version in the KUBE_VER variable
-KUBE_VER=$(kubectl version -o json | jq '. | .clientVersion.gitVersion' | tr -d \")
+KUBE_VER=$(kubectl version -o json | jq '. | .serverVersion.gitVersion' | tr -d \")
 
 #start minikube with latest kubernetes version
 minikube start --kubernetes-version=$KUBE_VER
