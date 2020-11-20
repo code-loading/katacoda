@@ -37,3 +37,12 @@ minikube start --kubernetes-version=$KUBE_VER
 
 #create alias
 alias k=kubectl
+
+#enable completion for kubectl
+kubectl completion bash
+
+#set aliases such as k=kubectl to work with completion
+echo 'complete -F __start_kubectl k' >>~/.bashrc
+
+#reinitialise shell for completion to work with aliases
+. ~/.bashrc
