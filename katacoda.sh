@@ -61,4 +61,4 @@ echo 'complete -F __start_kubectl k' >>~/.bashrc
 minikube start --kubernetes-version=$KUBE_VER
 
 #display a message to let the user know the setup is complete and the console is ready to use
-echo 'Happy kubectl-ing! :)'
+echo 'Have fun with kubernetes!! :)'
