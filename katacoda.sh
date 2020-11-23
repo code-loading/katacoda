@@ -59,3 +59,6 @@ echo 'complete -F __start_kubectl k' >>~/.bashrc
 #start minikube again, since reinitialising the shell stops minikube
 #for some reason even with setting the newest version in minikube config, it still starts the server with the older kubectl version, hence passing the --kubernetes-version flag is necessary here
 minikube start --kubernetes-version=$KUBE_VER
+
+#display a message to let the user know the setup is complete and the console is ready to use
+echo 'Happy kubectl-ing! :)'
