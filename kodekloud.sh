@@ -9,4 +9,7 @@ rm ~/.vimrc
 echo "set sts=2 ts=2 sw=2 et number" > ~/.vimrc && . ~/.vimrc
 alias kcf="kubectl create -f "
 alias kgp="kubectl get pods"
+alias kdp="kubectl delete po --force --grace-period=0"
+export nw="--force --grace-period=0"
+export do="--dry-run=client -o yaml"
 alias c=clear
