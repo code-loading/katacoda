@@ -13,3 +13,4 @@ alias kdp="kubectl delete po --force --grace-period=0"
 export nw="--force --grace-period=0"
 export do="--dry-run=client -o yaml"
 alias c=clear
+cd ..
