@@ -12,3 +12,7 @@ chmod +x katacoda.sh
 ```
 Wait to see the message "Have fun with kubernetes!! :)" before you start using it
 You could try out this tutorial to get your feet wet with kubernetes: https://kubernetes.io/docs/tutorials/kubernetes-basics/
+
+#kodekloud.sh
+
+Aliases and shortcuts I used for the CKAD exam. 
